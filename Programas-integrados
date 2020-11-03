@@ -1,0 +1,199 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+    int pant,ecen=0;
+        printf("\t\t\t\t*************HOLA ESTOS SON MIS PROGRAMAS**************\n");
+        printf ("¿QUE PROGRAMA DECEAS VER?\n");
+
+    while (ecen==0)
+{
+		system("color 0F");
+        printf("\n\n1.ASTERISCOS \n\n2.ROMBO DE ASTERISCOS \n\n3.SERIES DE NUMEROS ELEVADOS\n\n4.PI \n\n");
+
+        printf("******************¿CUAL DE MIS CUATRO PROGRAMAS TE GUSTARIA VER?:*******************: ");
+        scanf("%i",&pant);
+        system("cls");
+
+///////////////////////////////////////////////////////////////////////////////////////
+    if(pant==1)
+{
+
+    int a, b, c;
+    int ca=1;
+    int ce=4;
+    int ma=2;
+    int me=-1;
+        printf ("A)\n");
+    for (a=1;a<=10;a++)
+    {
+    for (c=1;c<=a;c++)
+    {
+        printf ("*");
+    }
+        printf ("\n");
+    }
+        printf ("B)\n");
+    for (a=1;a<=10;a++)
+    {
+    for (c=a;c<=10;c++)
+    {
+        printf ("*");
+    }
+        printf ("\n");
+    }
+        printf ("C)\n");
+    for (a=1;a<=10;a++)
+    {
+    for (b=2;b<=a;b++)
+    {
+        printf (" ");
+    }
+    for (c=10;c>=a;c--)
+    {
+        printf ("*");
+    }
+        printf ("\n");
+    }
+        printf ("D)\n");
+    for (a=1;a<=10;a++)
+    {
+    for (b=9;b>=a;b--)
+    {
+        printf(" ");
+    }
+    for (c=1;c<=a;c++)
+    {
+        printf("*");
+    }
+        printf ("\n");
+    }
+
+    return 0;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  else if(pant==2)
+{
+    int ast=1;
+    int esp=4;
+    int inc=2;
+    int incast=-1;
+
+    for (int r=1;r<=9;r++)
+    {
+    for (int e=1;e<=esp;e++)
+    {
+        printf (" ");
+    }
+    for (int a=1;a<=ast;a++)
+    {
+        printf ("*");
+    }
+        printf ("\n");
+    if (r==5)
+    {
+        inc=-2;
+        incast=1;
+    }
+        esp=esp+incast;
+        ast=ast+inc;
+    }
+
+    return 0;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    if(pant==3)
+{
+
+    int ndv;
+    int pri;
+    int seg;
+    int ter;
+    int cua;
+        printf ("Cuantas veces quieres que repita las serie\n");
+        scanf ("%d",&ndv);
+        pri=1;
+        seg=1;
+        ter=1;
+        cua=1;
+        printf ("\nPrimera serie de 2 en 2 de forma acendente:\n\n");
+    while (pri<=ndv)
+    {
+    int serie1=-1;
+    for (pri=1;pri<=ndv;pri++)
+    {
+        serie1=serie1+2;
+        printf ("%d, ",serie1);
+    }
+    }
+        printf ("\n\nSegunda serie de 3 en 3 de forma acendente:\n\n");
+    while (seg<=ndv)
+    {
+    int serie2=0;
+    for (seg=1;seg<=ndv;seg++)
+    {
+        serie2=serie2+3;
+        printf ("%d, ",serie2);
+    }
+    }
+        printf ("\n\nTercera serie de 10 en 10 de forma decendente:\n\n");
+    while (ter<=ndv)
+    {
+    int serie3=40;
+    for (ter=1;ter<=ndv;ter++)
+    {
+        serie3=serie3-10;
+        printf ("%d, ",serie3);
+    }
+    }
+        printf ("\n\nCuarta Serie de 8 en 8 en forma acendente:\n\n");
+    while (cua<=ndv)
+    {
+    int serie4=7;
+    for (cua=1;cua<=ndv;cua++)
+    {
+        serie4=serie4+8;
+        printf ("%d, ",serie4);
+    }
+    }
+
+    return 0;
+ }
+
+ //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    else if(pant==4)
+{
+
+    int inte;
+    int valor;
+    int al=1;
+    double pi = 0, alt;
+        printf("Ingresa el numero de veces que quieres ver la serie: ");
+        scanf("%d",&valor);
+    for (inte=0;inte<valor;inte++)
+    {
+        alt=4/(double)al;
+    if (inte % 2 == 1)
+    {
+        pi-=alt;
+    }
+    else
+    {
+        pi+=alt;
+    }
+        al+= 2;
+    }
+        printf("\nEl valor de Pi es: %.16f\n", pi);
+
+}
+}
+
+    return 0;
+}
